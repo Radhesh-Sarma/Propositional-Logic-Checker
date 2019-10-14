@@ -70,7 +70,9 @@ char top(char stack[], int max, int stackPointer)
 
     if(stackPointer <= -1)
     {
-        printf("Error!!! Stack is Empty"); // Checks Underflow Condition
+        printf("Error!!! Stack is Empty");
+         // Checks Underflow Condition
+         return -1;
     }
     return stack[stackPointer]; // return the top element of the stack
 }
