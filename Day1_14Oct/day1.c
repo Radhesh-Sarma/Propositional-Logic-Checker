@@ -12,7 +12,7 @@ void push(char stack[], int max, int *stackPointer, char value)
 
     if(*stackPointer + 1 == max)
     {
-        printf("OverFlow"); // Check if stack is full
+        printf("OverFlow \n"); // Check if stack is full
         return;
     }
     *stackPointer = *stackPointer + 1; // Increase stackPointer by 1
@@ -25,7 +25,7 @@ void pop(char stack[], int max, int *stackPointer)
     // return : void.
     if(*stackPointer == -1)
     {
-        printf("UnderFlow"); // check if stack is empty,then Underflow condition
+        printf("UnderFlow \n"); // check if stack is empty,then Underflow condition
         return ;
     }
     *stackPointer = *stackPointer - 1; // Decrease the stackPointer by 1
@@ -70,9 +70,9 @@ char top(char stack[], int max, int stackPointer)
 
     if(stackPointer == -1)
     {
-        printf("Error!!! Stack is Empty");
+        printf("Error!!! Stack is Empty \n");
          // Checks Underflow Condition
-         return -1;
+         return '\0';
     }
     return stack[stackPointer]; // return the top element of the stack
 }
