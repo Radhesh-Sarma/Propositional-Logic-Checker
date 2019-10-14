@@ -3,6 +3,8 @@
 //2. Harshit Gakhar (2018A7PS0182H)
 //3. Bhavyesh Desai (2018A7PS0164H)
 
+#include <stdio.h>
+
 void push(char stack[], int max, int *stackPointer, char value)
 {
 	*stackPointer = *stackPointer + 1; //increase stackPointer by 1
