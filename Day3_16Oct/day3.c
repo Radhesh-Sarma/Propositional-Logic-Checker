@@ -15,51 +15,51 @@
 
 void inorder(node *root)
 {
-    if(root->right!=NULL) printf("(");
-    if(root->left!=NULL) inorder(root->left);
-    printf("%c", root->ch);
-    if(root->right!=NULL) inorder(root->right);
-    if(root->right!=NULL) printf(")");
+    if(root->right!=NULL) printf("(");                  //if right is NULL, it must be a atom, so no parentheses required
+    if(root->left!=NULL) inorder(root->left);           //print left subtree
+    printf("%c", root->ch);                             //print char of current node
+    if(root->right!=NULL) inorder(root->right);         //print right subtree
+    if(root->right!=NULL) printf(")");                  //if right is NULL, it must be a atom, so no parentheses required
 }
 // constructs the binary tree given a postfix expression.
 // post_exp : character array containing postfix expression.
 // return : (node *) dataype - pointer to the root of the binary tree.
 node* parseTree(char post_exp[])
 {
-    int stackPointer = -1, max=100;
-    struct node * stack[max];
-    for(int i=0; i<strlen(post_exp); i++)
-    {
-        char temp=post_exp[i];
-        if((temp!='~')&&(temp!='V')&&(temp!='^')&&(temp!='>'))
+    int stackPointer = -1, max=100;                                         //initialised stack variables
+    struct node * stack[max];                                               //made stack
+    for(int i=0; i<strlen(post_exp); i++)                                   //looping over all chars
+    {                                               
+        char temp=post_exp[i];                                              //char at position i
+        if((temp!='~')&&(temp!='V')&&(temp!='^')&&(temp!='>'))              //to check if temp is operand
         {
-            struct node* pp=(struct node *)malloc(sizeof(struct node));
-            pp->ch=temp;
-            pp->left=pp->right=NULL;
-            push(stack, max, &stackPointer, pp );
+            struct node* pp=(struct node *)malloc(sizeof(struct node));     //new node
+            pp->ch=temp;                                                    //setting char in node
+            pp->left=pp->right=NULL;                                        //making children NULL(as it is an atom)
+            push(stack, max, &stackPointer, pp );                           //push in stack
         }
-        else if(temp!='~')
+        else if(temp!='~')                                                  //Only if operator is not unary
         {
-            struct node* pp=(struct node *)malloc(sizeof(struct node));
-            pp->ch=temp;
-            pp->left=pp->right=NULL;
-            struct node* right =top(stack, max, stackPointer);
-            pop(stack, max, &stackPointer);
-            struct node* left =top(stack, max, stackPointer);
-            pop(stack, max, &stackPointer);
-            pp->left=left;
-            pp->right=right;
-            push(stack, max, &stackPointer, pp );
+            struct node* pp=(struct node *)malloc(sizeof(struct node));     //new node
+            pp->ch=temp;                                                    //setting char in node
+            pp->left=pp->right=NULL;                                        //making children NULL
+            struct node* right =top(stack, max, stackPointer);              //getting right child from top of stack
+            pop(stack, max, &stackPointer);                                 //Popping from stack 
+            struct node* left =top(stack, max, stackPointer);               //getting left child from top of stack
+            pop(stack, max, &stackPointer);                                 //popping
+            pp->left=left;                                                  //assigning left child
+            pp->right=right;                                                //assigning right child
+            push(stack, max, &stackPointer, pp );                           //pushing pp
         }
-        else
+        else                                                                //Only '~' reaches here(only unary operator)
         {
-            struct node* pp=(struct node *)malloc(sizeof(struct node));
-            pp->ch=temp;
-            pp->left=pp->right=NULL;
-            struct node* child =top(stack, max, stackPointer);
-            pop(stack, max, &stackPointer);
-            pp->right=child;
-            push(stack, max, &stackPointer, pp );
+            struct node* pp=(struct node *)malloc(sizeof(struct node));     //new node
+            pp->ch=temp;                                                    //setting char in node
+            pp->left=pp->right=NULL;                                        //making children NULL
+            struct node* child =top(stack, max, stackPointer);              //getting only child
+            pop(stack, max, &stackPointer);                                 //popping from stack    
+            pp->right=child;                                                //setting child as right child to display properly
+            push(stack, max, &stackPointer, pp );                           //pushing new node in stack
         }
     }
     return top(stack, max, stackPointer);
