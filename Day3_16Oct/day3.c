@@ -9,6 +9,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include "modifiedDay1.h"
+#include "day3.h"
 // prints the infix expression via inorder traversal.
 // root : Pointer to root of the binary tree. (dataype : node *)
 // return : void

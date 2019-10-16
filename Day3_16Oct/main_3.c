@@ -3,7 +3,7 @@
 #include "day3.h"
 
 // main program to construct a parse tree from postfix expression
-// and prints the infix expression
+// and prints the infix expression 
 // author: Rashi Jain, 11/10/19
 
 int main()
