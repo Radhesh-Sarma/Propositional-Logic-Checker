@@ -21,23 +21,23 @@
 // return : void
 void push(node* stack[], int max, int *stackPointer, node* value)
 {
-    if(*stackPointer == max - 1) printf("Overflow");
-    else stack[++(*stackPointer)]=value;
+    if(*stackPointer == max - 1) printf("Overflow");                    //check overflow
+    else stack[++(*stackPointer)]=value;                                //otherwise assign
 }
 
 // deletes the top value from stack and updates *stackPointer.
 // return : void.
 void pop(node* stack[], int max, int *stackPointer)
 {
-    if(*stackPointer == - 1 ) printf("Underflow");
-    else --(*stackPointer);
+    if(*stackPointer == - 1 ) printf("Underflow");                      //check underflow
+    else --(*stackPointer);                                             //otherwise assign
 }
 
 // to check whether stack is empty or not by the value of *stackPointer.
 // return : 1 when stack is empty and 0 when it isn't
-int isEmpty(node* stack[], int max, int stackPointer)
+int isEmpty(node* stack[], int max, int stackPointer)                   
 {
-    if(stackPointer == - 1 ) return 1;
+    if(stackPointer == - 1 ) return 1;                                  
     else return 0;
 }
 
