@@ -53,5 +53,8 @@ int isFull(node* stack[], int max, int stackPointer)
 // return : Pointer to root of the subtree at the top of the stack.
 node* top(node* stack[], int max, int stackPointer)
 {
-    if(stackPointer != - 1 ) return stack[stackPointer];
+    if(stackPointer != - 1 )
+    	return stack[stackPointer];
+    struct node *temp = NULL;
+    return temp;
 }
