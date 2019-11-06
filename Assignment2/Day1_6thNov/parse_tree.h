@@ -1,6 +1,12 @@
 // contains functions to construct a parse tree and print the infix expression. 
 // author : Rashi Jain, 11/10/19
 
+//Team Nomenclature: A38
+//1. Radhesh Sarma (2017B4A70886H)
+//2. Harshit Gakhar (2018A7PS0182H)
+//3. Bhavyesh Desai (2018A7PS0164H)
+
+
 // prints the infix expression via inorder traversal. 
 // root : Pointer to root of the binary tree. (dataype : node *)
 // node dataype is defined as

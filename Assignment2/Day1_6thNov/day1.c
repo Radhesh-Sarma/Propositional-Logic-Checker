@@ -14,18 +14,24 @@ node *impl_free(node *root)
 {
 	char temp = root->ch;
 	if(temp != '^' && temp != 'V' && temp != '>' && temp != '~')
-		return root;
+		return root; // Check if it is an Propositional Atom 
 	else if(temp == '~')
 	{
 		impl_free(root->right);
+        // IMPL_FREE (~p) = ~p
+        
+
 	}
 	else if(temp == 'V' || temp == '^')
 	{
-		impl_free(root->left);
+        // IMPL_FREE (p V q ) = IMPL_FREE(p) V IMPL_FREE(q)
+        // IMPL_FREE (p ^ q ) = IMPL_FREE(p) ^ IMPL_FREE(q)
+		impl_free(root->left); 
 		impl_free(root->right);
 	}
 	else
 	{
+        // IMPL_FREE (p > q ) = ~IMPL_FREE(p) V IMPL_FREE(q)     
 		root->ch = 'V';
 		struct node *pp = (struct node *)malloc(sizeof(struct node));
 		pp->ch = '~';
