@@ -18,20 +18,18 @@ node *impl_free(node *root)
 	else if(temp == '~')
 	{
 		impl_free(root->right);
-        // IMPL_FREE (~p) = ~p
-        
-
+        // IMPL_FREE (~p) = ~IMPL_FREE(p)
 	}
 	else if(temp == 'V' || temp == '^')
 	{
-        // IMPL_FREE (p V q ) = IMPL_FREE(p) V IMPL_FREE(q)
-        // IMPL_FREE (p ^ q ) = IMPL_FREE(p) ^ IMPL_FREE(q)
+        // IMPL_FREE (p V q) = IMPL_FREE(p) V IMPL_FREE(q)
+        // IMPL_FREE (p ^ q) = IMPL_FREE(p) ^ IMPL_FREE(q)
 		impl_free(root->left); 
 		impl_free(root->right);
 	}
 	else
 	{
-        // IMPL_FREE (p > q ) = ~IMPL_FREE(p) V IMPL_FREE(q)     
+        // IMPL_FREE (p > q) = ~IMPL_FREE(p) V IMPL_FREE(q)     
 		root->ch = 'V';
 		struct node *pp = (struct node *)malloc(sizeof(struct node));
 		pp->ch = '~';
