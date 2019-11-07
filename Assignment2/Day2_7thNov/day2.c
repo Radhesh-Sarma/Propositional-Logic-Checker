@@ -49,8 +49,6 @@ node *nnf(node *root)
 		pp2->right = root->right;
 		root->left = pp1;
 		root->right = pp2;
-		inorder(root->left);
-		printf("\n");
 		//apply NNF on the new subtrees
 		nnf(root->left);
     	nnf(root->right);
