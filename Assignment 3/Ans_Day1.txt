@@ -6,11 +6,8 @@ Team Nomenclature: A38
 
 
 1) Not Equivalent
-
-
 	Model name: 1.smv
 	Model description:
-
 	 Let Model M(S,>,L) be such a model.
 	 We assume that p is a propositional atom.
 	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
@@ -20,7 +17,7 @@ Team Nomenclature: A38
 	 Labelling is as follows : L(s1) = {p}
 	 						   L(s2) = {}
 	 Initial state for this example is s1
-
+	 Here EF p  is true, EG p  is false
 
 2) Equivalent
 	Consider EF(phi) | EF(psi) to be true;
@@ -42,6 +39,7 @@ Team Nomenclature: A38
 	
 	As both the formulas imply each other, they are equivalent.
 	
+
 3) Not Equivalent
 	Model name: 3.smv
 	Model description:
@@ -55,7 +53,10 @@ Team Nomenclature: A38
 	 				   s3 > s3
 	 Labelling is as follows : L(s1) = {}
 	 						   L(s2) = {p}
-	 						   L(s3) = {q}			
+	 						   L(s3) = {q}	
+	 Initial state for this example is s1						   	
+	 Here AF (p | q)  is true, (AF p | AF q)  is false
+
 4) Not Equivalent
 	Model name: 4.smv
 	Model description:
@@ -68,5 +69,6 @@ Team Nomenclature: A38
 	 Labelling is as follows : L(s1) = {p}
 	 						   L(s2) = {}
 	 Initial state for this example is s1
+	 Here !(AF p)  is false, EF !p  is true
 
 
