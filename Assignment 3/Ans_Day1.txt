@@ -13,9 +13,9 @@ Team Nomenclature: A38
 	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
 	 The states are {s1, s2}.
 	 Transitions are : s1 > s2
-	 				   s2 > s2
+	 		   s2 > s2
 	 Labelling is as follows : L(s1) = {p}
-	 						   L(s2) = {}
+	 			   L(s2) = {}
 	 Initial state for this example is s1
 	 Here EF p  is true, EG p  is false
 
@@ -52,8 +52,8 @@ Team Nomenclature: A38
 	 				   s2 > s2
 	 				   s3 > s3
 	 Labelling is as follows : L(s1) = {}
-	 						   L(s2) = {p}
-	 						   L(s3) = {q}	
+	 			   L(s2) = {p}
+	 			   L(s3) = {q}	
 	 Initial state for this example is s1						   	
 	 Here AF (p | q)  is true, (AF p | AF q)  is false
 
@@ -65,9 +65,9 @@ Team Nomenclature: A38
 	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
 	 The states are {s1, s2}.
 	 Transitions are : s1 > s2
-	 				   s2 > s2
+	 		   s2 > s2
 	 Labelling is as follows : L(s1) = {p}
-	 						   L(s2) = {}
+	 			   L(s2) = {}
 	 Initial state for this example is s1
 	 Here !(AF p)  is false, EF !p  is true
 
