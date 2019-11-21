@@ -4,11 +4,12 @@ VAR
 ASSIGN
 	init(state) := s1;
 	next(state) := case
-						TRUE : s2;
+						(state = s1) : {s2};
+						(state = s2) : {s2};
 					esac;
 DEFINE
-	phi := (state = s1);
+	p := (state = s1);
 CTLSPEC
-	!AF(phi)
+	!AF(p)
 CTLSPEC
-	EF(!phi)
+	EF(!p)

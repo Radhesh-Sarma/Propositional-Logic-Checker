@@ -3,12 +3,25 @@ Team Nomenclature: A38
 2. Harshit Gakhar (2018A7PS0182H)
 3. Bhavyesh Desai (2018A7PS0164H)
 
-ge
+
 
 1) Not Equivalent
+
+
 	Model name: 1.smv
 	Model description:
-	
+
+	 Let Model M(S,>,L) be such a model.
+	 We assume that p is a propositional atom.
+	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
+	 The states are {s1, s2}.
+	 Transitions are : s1 > s2
+	 				   s2 > s2
+	 Labelling is as follows : L(s1) = {p}
+	 						   L(s2) = {}
+	 Initial state for this example is s1
+
+
 2) Equivalent
 	Consider EF(phi) | EF(psi) to be true;
 	Therefore, there exists a path where phi OR psi occur in a future state;
@@ -27,14 +40,33 @@ ge
 	Combining both the cases, we get EF(phi) | EF(psi) holds.
 	Hence, EF(phi | psi) -> (EF(phi) | EF(psi))
 	
-	As the formulas imply each other, they are equivalent.
+	As both the formulas imply each other, they are equivalent.
 	
 3) Not Equivalent
 	Model name: 3.smv
 	Model description:
-	
+	 Let Model M(S,>,L) be such a model.
+	 We assume that p,q are propositional atoms.
+	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
+	 The states are {s1, s2, s3}
+	 Transitions are : s1 > s2
+	 				   s1 > s3
+	 				   s2 > s2
+	 				   s3 > s3
+	 Labelling is as follows : L(s1) = {}
+	 						   L(s2) = {p}
+	 						   L(s3) = {q}			
 4) Not Equivalent
 	Model name: 4.smv
 	Model description:
+	 Let Model M(S,>,L) be such a model.
+	 We assume that p is a propositional atom.
+	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
+	 The states are {s1, s2}.
+	 Transitions are : s1 > s2
+	 				   s2 > s2
+	 Labelling is as follows : L(s1) = {p}
+	 						   L(s2) = {}
+	 Initial state for this example is s1
 
 

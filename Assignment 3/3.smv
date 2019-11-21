@@ -9,9 +9,9 @@ ASSIGN
 						(state = s3) : {s3};
 					esac;
 DEFINE
-	phi := (state = s2);
-	psi := (state = s3);
+	p := (state = s2);
+	q := (state = s3);
 CTLSPEC
-	AF(phi | psi)
+	AF(p | q)
 CTLSPEC
-	(AF(phi)) | (AF(psi))
+	(AF(p)) | (AF(q))
