@@ -1,0 +1,17 @@
+MODULE main
+VAR
+	state : {s1, s2, s3};
+ASSIGN
+	init(state) := s1;
+	next(state) := case
+						(state = s1) : {s2, s3};
+						(state = s2) : {s2};
+						(state = s3) : {s3};
+					esac;
+DEFINE
+	phi := (state = s2);
+	psi := (state = s3);
+SPEC
+	AF(phi | psi)
+SPEC
+	(AF(phi)) | (AF(psi))

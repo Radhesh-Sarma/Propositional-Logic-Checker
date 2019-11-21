@@ -1,0 +1,14 @@
+MODULE main
+VAR
+	state : {s1, s2};
+ASSIGN
+	init(state) := s1;
+	next(state) := case
+						TRUE : s2;
+					esac;
+DEFINE
+	phi := (state = s1);
+SPEC
+	EF(phi)
+SPEC
+	EG(phi)

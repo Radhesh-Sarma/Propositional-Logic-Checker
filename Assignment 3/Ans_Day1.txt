@@ -5,6 +5,36 @@ Team Nomenclature: A38
 
 
 
-For Question 3 , there exists a model given in model3.smv for which AF (p | q)  is true , (AF p | AF q)  is false
+1) Not Equivalent
+	Model name: 1.smv
+	Model description:
+	
+2) Equivalent
+	Consider EF(phi) | EF(psi) to be true;
+	Therefore, there exists a path where phi OR psi occur in a future state;
+	Therefore, in that same state, (phi | psi) holds true.
+	Therefore, EF(phi | psi) holds true)
+	Hence, (EF(phi) | EF(psi)) -> EF(phi | psi)
+	
+	Now, consider EF(phi | psi) to be true;
+	Then there exists a path where (phi | psi) holds true.
+	Case 1: phi holds.
+		Since phi holds in that state on that path, EF(phi) holds.
+		Therefore, EF(phi) | EF(psi) holds.
+	Case 2: psi holds.
+		Since psi holds in that state on that path, EF(psi) holds.
+		Therefore, EF(phi) | EF(psi) holds.
+	Combining both the cases, we get EF(phi) | EF(psi) holds.
+	Hence, EF(phi | psi) -> (EF(phi) | EF(psi))
+	
+	As the formulas imply each other, they are equivalent.
+	
+3) Not Equivalent
+	Model name: 3.smv
+	Model description:
+	
+4) Not Equivalent
+	Model name: 4.smv
+	Model description:
 
 
