@@ -11,7 +11,7 @@ ASSIGN
 DEFINE
 	phi := (state = s2);
 	psi := (state = s3);
-SPEC
+CTLSPEC
 	AF(phi | psi)
-SPEC
+CTLSPEC
 	(AF(phi)) | (AF(psi))

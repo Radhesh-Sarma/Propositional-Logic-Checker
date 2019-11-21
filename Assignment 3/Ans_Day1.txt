@@ -3,7 +3,7 @@ Team Nomenclature: A38
 2. Harshit Gakhar (2018A7PS0182H)
 3. Bhavyesh Desai (2018A7PS0164H)
 
-
+ge
 
 1) Not Equivalent
 	Model name: 1.smv
