@@ -9,7 +9,7 @@ ASSIGN
 					esac;
 DEFINE
 	p := (state = s1);
-	q := FALSE;
+	q := (FALSE);
 LTLSPEC
 	F(p) -> F(q)
 CTLSPEC
