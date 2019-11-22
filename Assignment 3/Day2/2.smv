@@ -1,15 +1,16 @@
 MODULE main
 VAR
-	state : {s1, s2};
+	state : {s1, s2, s3};
 ASSIGN
 	init(state) := s1;
 	next(state) := case
-						(state = s1) : {s2};
+						(state = s1) : {s2,s3};
 						(state = s2) : {s2};
+						(state = s3) : {s3};					
 					esac;
 DEFINE
 	p := (state = s1);
-	q := (FALSE);
+	q := (state = s3);
 LTLSPEC
 	F(p) -> F(q)
 CTLSPEC

@@ -23,10 +23,13 @@ Team Nomenclature: A38
 	 Let Model M(S,>,L) be such a model.
 	 We assume that p and q are propositional atoms.
 	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
-	 The states are {s1, s2}.
+	 The states are {s1, s2, s3}.
 	 Transitions are : s1 > s2
-	 				   s2 > s2
+	 		   s1 > s3
+			   s2 > s2
+		           s3 > s3
 	 Labelling is as follows : L(s1) = {p}
 	 			   L(s2) = {}
+				   L(s3) = {q}
 	 Initial state for this example is s1
 	 Here all 3 LTL/CTL formulas ( F p ->  F q) , (AF p -> AF q) , AG (p -> AF q) do not hold.
