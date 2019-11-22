@@ -1,0 +1,18 @@
+MODULE main
+VAR
+	state : {s1, s2};
+ASSIGN
+	init(state) := s1;
+	next(state) := case
+						(state = s1) : {s2};
+						(state = s2) : {s2};
+					esac;
+DEFINE
+	p := (state = s1);
+	q := (state = s2);
+LTLSPEC
+	F(p) -> F(q)
+CTLSPEC
+	AF(p) -> AF(q)
+CTLSPEC
+	AG(p -> AF(q))

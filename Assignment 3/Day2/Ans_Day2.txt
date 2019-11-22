@@ -1,0 +1,30 @@
+Team Nomenclature: A38
+1. Radhesh Sarma (2017B4A70886H)
+2. Harshit Gakhar (2018A7PS0182H)
+3. Bhavyesh Desai (2018A7PS0164H)
+
+1) Model Exists
+	Model name: 1.smv
+	Model description:
+	 Let Model M(S,>,L) be such a model.
+	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
+	 The states are {s1, s2}.
+	 Transitions are : s1 > s2
+	 				   s2 > s2
+	 Labelling is as follows : L(s1) = {p}
+	 						   L(s2) = {q}
+	 Initial state for this example is s1
+	 Here F(p) -> F(q), AF(p) -> AF(q), AG(p -> AF(q)) are all false.
+
+2) Model Exists
+	Model name: 2.smv
+	Model description:
+	 Let Model M(S,>,L) be such a model.
+	 Here > is a transition relation (binary relation on S),L is a Labelling function from S to power set of atoms
+	 The states are {s1, s2}.
+	 Transitions are : s1 > s2
+	 				   s2 > s2
+	 Labelling is as follows : L(s1) = {p}
+	 						   L(s2) = {}
+	 Initial state for this example is s1
+	 Here F(p) -> F(q), AF(p) -> AF(q), AG(p -> AF(q)) are all true.
